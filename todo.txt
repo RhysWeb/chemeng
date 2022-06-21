@@ -1,0 +1,2 @@
+1. Figure out how to modify the database: Use: https://docs.planetscale.com/concepts/branching
+
