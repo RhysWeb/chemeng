@@ -26,6 +26,14 @@ export default async function assetHandler(req, res) {
 			} catch (e) {
 				console.log('placeholder');
 			}
+		//this delete is copilot
+		case 'DELETE':
+			try {
+				const { id } = req.params;
+				await prisma.person.delete({ where: { id } });
+			} catch (e) {
+				console.error('Request error', e);
+			}
 		default:
 			res.setHeader('Allow', ['GET']);
 			res.status(405).end(`Method ${method} Not Allowed`);
